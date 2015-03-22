@@ -1,4 +1,4 @@
-#import "UIView+Utils.h"
+#import "UIView+IPFrameUtils.h"
 
 @implementation UIView (IPFrameUtils)
 
@@ -109,33 +109,6 @@
     }
     self.frame = frame;
 
-}
-
-- (void)enumerateSuperviewsWithBlock:(void (^)(UIView *view, NSUInteger idx, BOOL *stop))block {
-    UIView *thisView = self;
-    NSUInteger index = 0;
-    __block BOOL stop = NO;
-    while (thisView.superview != nil && stop == NO)
-    {
-        block(thisView.superview, index, &stop);
-        index++;
-        thisView = thisView.superview;
-    }
-}
-
-+ (UIViewAnimationOptions)animationOptionsFromAnimationCurve:(UIViewAnimationCurve)animationCurve {
-    switch (animationCurve) {
-        case UIViewAnimationCurveEaseIn:
-            return UIViewAnimationOptionCurveEaseIn;
-        case UIViewAnimationCurveEaseInOut:
-            return UIViewAnimationOptionCurveEaseInOut;
-        case UIViewAnimationCurveEaseOut:
-            return UIViewAnimationOptionCurveEaseOut;
-        case UIViewAnimationCurveLinear:
-            return UIViewAnimationOptionCurveLinear;
-        default:
-            return 0;
-    }
 }
 
 @end

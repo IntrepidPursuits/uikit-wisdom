@@ -54,21 +54,4 @@
  */
 @property (nonatomic, readwrite) CGFloat frameMaxY;
 
-/*!
- When adjustHeight is NO, this moves the origin of the view so that the bottom edge is at frameMaxY. The frame's height does not change.
- When adjustHeight is YES, the size of the view is changed so that the bottom edge is at frameMaxY.
- */
-- (void)setFrameMaxY:(CGFloat)frameMaxY adjustHeight:(BOOL)adjustHeight;
-
-/*!
- Enumerates through the receiver's superviews until no superviews are found.
- */
-- (void)enumerateSuperviewsWithBlock:(void (^)(UIView *view, NSUInteger idx, BOOL *stop))block;
-
-/*!
- Converts a UIViewAnimationCurve into a UIViewAnimationOptions option
- */
-+ (UIViewAnimationOptions)animationOptionsFromAnimationCurve:(UIViewAnimationCurve)animationCurve;
-s
-
 @end
