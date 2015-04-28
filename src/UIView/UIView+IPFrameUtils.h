@@ -60,15 +60,4 @@
  */
 - (void)setFrameMaxY:(CGFloat)frameMaxY adjustHeight:(BOOL)adjustHeight;
 
-/*!
- Enumerates through the receiver's superviews until no superviews are found.
- */
-- (void)enumerateSuperviewsWithBlock:(void (^)(UIView *view, NSUInteger idx, BOOL *stop))block;
-
-/*!
- Converts a UIViewAnimationCurve into a UIViewAnimationOptions option
- */
-+ (UIViewAnimationOptions)animationOptionsFromAnimationCurve:(UIViewAnimationCurve)animationCurve;
-s
-
 @end

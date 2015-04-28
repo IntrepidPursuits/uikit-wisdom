@@ -10,8 +10,10 @@
 		2E6411A91ABF212300B86B5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6411A81ABF212300B86B5F /* main.m */; };
 		2E6411AC1ABF212300B86B5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6411AB1ABF212300B86B5F /* AppDelegate.m */; };
 		2E6411C31ABF212300B86B5F /* UIKitWisdomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6411C21ABF212300B86B5F /* UIKitWisdomTests.m */; };
-		2E6411D11ABF218400B86B5F /* UIView+IPFrameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6411D01ABF218400B86B5F /* UIView+IPFrameUtils.m */; };
 		2E6411D31ABF220400B86B5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6411D21ABF220400B86B5F /* Main.storyboard */; };
+		B5C18C461AEF0DDE00CB5D91 /* UIView+IPFrameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C18C451AEF0DDE00CB5D91 /* UIView+IPFrameUtils.m */; };
+		B5C18C491AEF0E7700CB5D91 /* UIView+IPAncestry.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C18C481AEF0E7700CB5D91 /* UIView+IPAncestry.m */; };
+		B5C18C4C1AEF103900CB5D91 /* UIViewAncestryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C18C4B1AEF103900CB5D91 /* UIViewAncestryTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +35,12 @@
 		2E6411BC1ABF212300B86B5F /* UIKitWisdomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitWisdomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6411C11ABF212300B86B5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E6411C21ABF212300B86B5F /* UIKitWisdomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitWisdomTests.m; sourceTree = "<group>"; };
-		2E6411CF1ABF218400B86B5F /* UIView+IPFrameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IPFrameUtils.h"; sourceTree = "<group>"; };
-		2E6411D01ABF218400B86B5F /* UIView+IPFrameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IPFrameUtils.m"; sourceTree = "<group>"; };
 		2E6411D21ABF220400B86B5F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		B5C18C441AEF0DDE00CB5D91 /* UIView+IPFrameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IPFrameUtils.h"; sourceTree = "<group>"; };
+		B5C18C451AEF0DDE00CB5D91 /* UIView+IPFrameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IPFrameUtils.m"; sourceTree = "<group>"; };
+		B5C18C471AEF0E7700CB5D91 /* UIView+IPAncestry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IPAncestry.h"; sourceTree = "<group>"; };
+		B5C18C481AEF0E7700CB5D91 /* UIView+IPAncestry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IPAncestry.m"; sourceTree = "<group>"; };
+		B5C18C4B1AEF103900CB5D91 /* UIViewAncestryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAncestryTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +82,7 @@
 		2E6411A51ABF212300B86B5F /* UIKitWisdom */ = {
 			isa = PBXGroup;
 			children = (
-				2E6411CD1ABF218400B86B5F /* src */,
+				B5C18C421AEF0DB100CB5D91 /* src */,
 				2E6411AA1ABF212300B86B5F /* AppDelegate.h */,
 				2E6411AB1ABF212300B86B5F /* AppDelegate.m */,
 				2E6411D21ABF220400B86B5F /* Main.storyboard */,
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				2E6411C21ABF212300B86B5F /* UIKitWisdomTests.m */,
+				B5C18C4B1AEF103900CB5D91 /* UIViewAncestryTests.m */,
 				2E6411C01ABF212300B86B5F /* Supporting Files */,
 			);
 			path = UIKitWisdomTests;
@@ -112,19 +118,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2E6411CD1ABF218400B86B5F /* src */ = {
+		B5C18C421AEF0DB100CB5D91 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				2E6411CE1ABF218400B86B5F /* UIView */,
+				B5C18C431AEF0DC300CB5D91 /* UIView */,
 			);
-			path = src;
+			name = src;
+			path = ../../../src;
 			sourceTree = "<group>";
 		};
-		2E6411CE1ABF218400B86B5F /* UIView */ = {
+		B5C18C431AEF0DC300CB5D91 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				2E6411CF1ABF218400B86B5F /* UIView+IPFrameUtils.h */,
-				2E6411D01ABF218400B86B5F /* UIView+IPFrameUtils.m */,
+				B5C18C471AEF0E7700CB5D91 /* UIView+IPAncestry.h */,
+				B5C18C481AEF0E7700CB5D91 /* UIView+IPAncestry.m */,
+				B5C18C441AEF0DDE00CB5D91 /* UIView+IPFrameUtils.h */,
+				B5C18C451AEF0DDE00CB5D91 /* UIView+IPFrameUtils.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -227,8 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C18C491AEF0E7700CB5D91 /* UIView+IPAncestry.m in Sources */,
 				2E6411AC1ABF212300B86B5F /* AppDelegate.m in Sources */,
-				2E6411D11ABF218400B86B5F /* UIView+IPFrameUtils.m in Sources */,
+				B5C18C461AEF0DDE00CB5D91 /* UIView+IPFrameUtils.m in Sources */,
 				2E6411A91ABF212300B86B5F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E6411C31ABF212300B86B5F /* UIKitWisdomTests.m in Sources */,
+				B5C18C4C1AEF103900CB5D91 /* UIViewAncestryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIKitWisdom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -349,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIKitWisdom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -367,6 +380,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = UIKitWisdomTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIKitWisdom.app/UIKitWisdom";
@@ -382,6 +396,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = UIKitWisdomTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIKitWisdom.app/UIKitWisdom";
@@ -407,6 +422,7 @@
 				2E6411C81ABF212300B86B5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E6411C91ABF212300B86B5F /* Build configuration list for PBXNativeTarget "UIKitWisdomTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +431,7 @@
 				2E6411CB1ABF212300B86B5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
