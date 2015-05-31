@@ -1,11 +1,3 @@
-//
-//  UIImage+ColorMaskedImage.m
-//  Chronability
-//
-//  Created by Logan Wright on 3/18/15.
-//  Copyright (c) 2015 IntrepidPursuits. All rights reserved.
-//
-
 #import "UIImage+ColorMaskedImage.h"
 
 @implementation UIImage (ColorMaskedImage)
