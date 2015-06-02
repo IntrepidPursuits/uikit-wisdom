@@ -11,6 +11,7 @@
 		2E6411AC1ABF212300B86B5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6411AB1ABF212300B86B5F /* AppDelegate.m */; };
 		2E6411C31ABF212300B86B5F /* UIKitWisdomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6411C21ABF212300B86B5F /* UIKitWisdomTests.m */; };
 		2E6411D31ABF220400B86B5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6411D21ABF220400B86B5F /* Main.storyboard */; };
+		B59F64931B1A98750086AA81 /* UIColor+IPRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B59F64921B1A98750086AA81 /* UIColor+IPRandomColor.m */; };
 		B5C18C461AEF0DDE00CB5D91 /* UIView+IPFrameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C18C451AEF0DDE00CB5D91 /* UIView+IPFrameUtils.m */; };
 		B5C18C491AEF0E7700CB5D91 /* UIView+IPAncestry.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C18C481AEF0E7700CB5D91 /* UIView+IPAncestry.m */; };
 		B5C18C4C1AEF103900CB5D91 /* UIViewAncestryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C18C4B1AEF103900CB5D91 /* UIViewAncestryTests.m */; };
@@ -36,6 +37,8 @@
 		2E6411C11ABF212300B86B5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E6411C21ABF212300B86B5F /* UIKitWisdomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitWisdomTests.m; sourceTree = "<group>"; };
 		2E6411D21ABF220400B86B5F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		B59F64911B1A98750086AA81 /* UIColor+IPRandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IPRandomColor.h"; sourceTree = "<group>"; };
+		B59F64921B1A98750086AA81 /* UIColor+IPRandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IPRandomColor.m"; sourceTree = "<group>"; };
 		B5C18C441AEF0DDE00CB5D91 /* UIView+IPFrameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IPFrameUtils.h"; sourceTree = "<group>"; };
 		B5C18C451AEF0DDE00CB5D91 /* UIView+IPFrameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IPFrameUtils.m"; sourceTree = "<group>"; };
 		B5C18C471AEF0E7700CB5D91 /* UIView+IPAncestry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IPAncestry.h"; sourceTree = "<group>"; };
@@ -118,9 +121,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B59F64901B1A984B0086AA81 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				B59F64911B1A98750086AA81 /* UIColor+IPRandomColor.h */,
+				B59F64921B1A98750086AA81 /* UIColor+IPRandomColor.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		B5C18C421AEF0DB100CB5D91 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				B59F64901B1A984B0086AA81 /* UIColor */,
 				B5C18C431AEF0DC300CB5D91 /* UIView */,
 			);
 			name = src;
@@ -240,6 +253,7 @@
 				2E6411AC1ABF212300B86B5F /* AppDelegate.m in Sources */,
 				B5C18C461AEF0DDE00CB5D91 /* UIView+IPFrameUtils.m in Sources */,
 				2E6411A91ABF212300B86B5F /* main.m in Sources */,
+				B59F64931B1A98750086AA81 /* UIColor+IPRandomColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
