@@ -133,6 +133,10 @@
     [self constrainView:view attribute:NSLayoutAttributeWidth toView:sizingView attribute:NSLayoutAttributeWidth];
 }
 
+- (void)constrainView:(UIView *)view toHeightOfView:(UIView *)sizingView {
+    [self constrainView:view attribute:NSLayoutAttributeHeight toView:sizingView attribute:NSLayoutAttributeHeight];
+}
+
 - (void)constrainView:(UIView *)viewA attribute:(NSLayoutAttribute)attributeA toView:(UIView *)viewB attribute:(NSLayoutAttribute)attributeB {
     [self constrainView:viewA
               attribute:attributeA

@@ -185,6 +185,14 @@
  */
 - (void)constrainView:(UIView *)view toWidthOfView:(UIView *)sizingView;
 
+/**
+ *  Constrain the height of two views to be equal
+ *
+ *  @param view       the view to constrain
+ *  @param sizingView the view to use as a height reference
+ */
+- (void)constrainView:(UIView *)view toHeightOfView:(UIView *)sizingView;
+
 /*!
  *  More customizable control for building relationships between two views
  *
