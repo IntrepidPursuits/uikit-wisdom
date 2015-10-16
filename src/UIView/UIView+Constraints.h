@@ -161,6 +161,30 @@
  */
 - (void)constrainView:(UIView *)view rightOfView:(UIView *)positioningView;
 
+/**
+ *  Position two views so that their tops are aligned vertically
+ *
+ *  @param view            the view to position
+ *  @param positioningView the view to use for positioning
+ */
+- (void)constrainView:(UIView *)view toTopOfView:(UIView *)positioningView;
+
+/**
+ *  Position two views so that their bottoms are aligned vertically
+ *
+ *  @param view            the view to position
+ *  @param positioningView the view to use for positioning
+ */
+- (void)constrainView:(UIView *)view toBottomOfView:(UIView *)positioningView;
+
+/**
+ *  Constrain the width of two views to be equal
+ *
+ *  @param view       the view to constrain
+ *  @param sizingView the view to use as a width reference
+ */
+- (void)constrainView:(UIView *)view toWidthOfView:(UIView *)sizingView;
+
 /*!
  *  More customizable control for building relationships between two views
  *

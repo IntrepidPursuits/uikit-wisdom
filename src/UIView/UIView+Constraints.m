@@ -121,6 +121,18 @@
     [self constrainView:view attribute:NSLayoutAttributeLeft toView:positioningView attribute:NSLayoutAttributeRight];
 }
 
+- (void)constrainView:(UIView *)view toTopOfView:(UIView *)positioningView {
+    [self constrainView:view attribute:NSLayoutAttributeTop toView:positioningView attribute:NSLayoutAttributeTop];
+}
+
+- (void)constrainView:(UIView *)view toBottomOfView:(UIView *)positioningView {
+    [self constrainView:view attribute:NSLayoutAttributeBottom toView:positioningView attribute:NSLayoutAttributeBottom];
+}
+
+- (void)constrainView:(UIView *)view toWidthOfView:(UIView *)sizingView {
+    [self constrainView:view attribute:NSLayoutAttributeWidth toView:sizingView attribute:NSLayoutAttributeWidth];
+}
+
 - (void)constrainView:(UIView *)viewA attribute:(NSLayoutAttribute)attributeA toView:(UIView *)viewB attribute:(NSLayoutAttribute)attributeB {
     [self constrainView:viewA
               attribute:attributeA
