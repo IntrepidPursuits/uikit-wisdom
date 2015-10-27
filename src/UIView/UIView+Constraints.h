@@ -129,13 +129,30 @@
  */
 - (void)constrainView:(UIView *)view toHeight:(CGFloat)height;
 
+/**
+ *  Constrain a view to a specified aspect ration
+ *
+ *  @param view        the view to constrain
+ *  @param aspectRatio the aspect ratio to constrain the view
+ */
+- (void)constrainView:(UIView *)view toAspectRatio:(CGFloat)aspectRatio;
+
 /*!
- *  Position a view above another view.
+ *  Position a view above another view
  *
  *  @param view            the view to position above
  *  @param positioningView the view to use for positioning
  */
 - (void)constrainView:(UIView *)view aboveView:(UIView *)positioningView;
+
+/**
+ *  Position a view above another view with an offset
+ *
+ *  @param view            the view to position above
+ *  @param positioningView the view to use for positioning
+ *  @param offset          the constant to offset
+ */
+- (void)constrainView:(UIView *)view aboveView:(UIView *)positioningView withOffset:(CGFloat)offset;
 
 /*!
  *  Position a view below another view
@@ -145,6 +162,15 @@
  */
 - (void)constrainView:(UIView *)view belowView:(UIView *)positioningView;
 
+/**
+ *  Position a view below another view with offset
+ *
+ *  @param view            the view to position below
+ *  @param positioningView the view to use for positioning
+ *  @param offset          the constant to offset
+ */
+- (void)constrainView:(UIView *)view belowView:(UIView *)positioningView withOffset:(CGFloat)offset;
+
 /*!
  *  Position a view to the left of another view
  *
@@ -153,6 +179,15 @@
  */
 - (void)constrainView:(UIView *)view leftOfView:(UIView *)positioningView;
 
+/**
+ *  Position a view to the left of another view with offset
+ *
+ *  @param view            the view to position
+ *  @param positioningView the view to use for positioning
+ *  @param offset          the constant to offset
+ */
+- (void)constrainView:(UIView *)view leftOfView:(UIView *)positioningView withOffset:(CGFloat)offset;
+
 /*!
  *  Position a view to the right of another view
  *
@@ -160,6 +195,15 @@
  *  @param positioningView the view to use for positioning
  */
 - (void)constrainView:(UIView *)view rightOfView:(UIView *)positioningView;
+
+/**
+ *  Position a view to the right of another view with offset
+ *
+ *  @param view            the view to position
+ *  @param positioningView the view to use for positioning
+ *  @param offset          the constant to offset
+ */
+- (void)constrainView:(UIView *)view rightOfView:(UIView *)positioningView withOffset:(CGFloat)offset;
 
 /**
  *  Position two views so that their tops are aligned vertically

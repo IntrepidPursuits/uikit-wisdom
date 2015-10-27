@@ -105,20 +105,40 @@
     [self addConstraint:heightConstraint];
 }
 
+- (void)constrainView:(UIView *)view toAspectRatio:(CGFloat)aspectRatio {
+    [self constrainView:view attribute:NSLayoutAttributeWidth toView:view attribute:NSLayoutAttributeHeight constant:0.0 multiplier:aspectRatio];
+}
+
 - (void)constrainView:(UIView *)view aboveView:(UIView *)positioningView {
     [self constrainView:view attribute:NSLayoutAttributeBottom toView:positioningView attribute:NSLayoutAttributeTop];
+}
+
+- (void)constrainView:(UIView *)view aboveView:(UIView *)positioningView withOffset:(CGFloat)offset {
+    [self constrainView:view attribute:NSLayoutAttributeBottom toView:positioningView attribute:NSLayoutAttributeTop constant:offset multiplier:1.0];
 }
 
 - (void)constrainView:(UIView *)view belowView:(UIView *)positioningView {
     [self constrainView:view attribute:NSLayoutAttributeTop toView:positioningView attribute:NSLayoutAttributeBottom];
 }
 
+- (void)constrainView:(UIView *)view belowView:(UIView *)positioningView withOffset:(CGFloat)offset {
+    [self constrainView:view attribute:NSLayoutAttributeTop toView:positioningView attribute:NSLayoutAttributeBottom constant:offset multiplier:1.0];
+}
+
 - (void)constrainView:(UIView *)view leftOfView:(UIView *)positioningView {
     [self constrainView:view attribute:NSLayoutAttributeRight toView:positioningView attribute:NSLayoutAttributeLeft];
 }
 
+- (void)constrainView:(UIView *)view leftOfView:(UIView *)positioningView withOffset:(CGFloat)offset {
+    [self constrainView:view attribute:NSLayoutAttributeRight toView:positioningView attribute:NSLayoutAttributeLeft constant:offset multiplier:1.0];
+}
+
 - (void)constrainView:(UIView *)view rightOfView:(UIView *)positioningView {
     [self constrainView:view attribute:NSLayoutAttributeLeft toView:positioningView attribute:NSLayoutAttributeRight];
+}
+
+- (void)constrainView:(UIView *)view rightOfView:(UIView *)positioningView withOffset:(CGFloat)offset {
+    [self constrainView:view attribute:NSLayoutAttributeLeft toView:positioningView attribute:NSLayoutAttributeRight constant:offset multiplier:1.0];
 }
 
 - (void)constrainView:(UIView *)view toTopOfView:(UIView *)positioningView {
