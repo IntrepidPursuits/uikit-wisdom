@@ -106,15 +106,7 @@
 }
 
 - (void)constrainView:(UIView *)view toAspectRatio:(CGFloat)aspectRatio {
-    NSLayoutConstraint *aspectRationConstraint = [NSLayoutConstraint constraintWithItem:view
-                                                                  attribute:NSLayoutAttributeWidth
-                                                                  relatedBy:NSLayoutRelationEqual
-                                                                     toItem:view
-                                                                  attribute:NSLayoutAttributeHeight
-                                                                 multiplier:aspectRatio
-                                                                   constant:0.0];
-    view.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addConstraint:aspectRationConstraint];
+    [self constrainView:view attribute:NSLayoutAttributeWidth toView:view attribute:NSLayoutAttributeHeight constant:0.0 multiplier:aspectRatio];
 }
 
 - (void)constrainView:(UIView *)view aboveView:(UIView *)positioningView {
