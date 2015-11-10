@@ -1,12 +1,17 @@
 #import "UIView+Constraints.h"
 
+NSString *const IPConstraintKeyTop = @"IPConstraintKeyTop";
+NSString *const IPConstraintKeyLeft = @"IPConstraintKeyLeft";
+NSString *const IPConstraintKeyBottom = @"IPConstraintKeyBottom";
+NSString *const IPConstraintKeyRight = @"IPConstraintKeyRight";
+
 @implementation UIView (CBConstraints)
 
-- (NSDictionary *)constrainView:(UIView *)view top:(CGFloat)top left:(CGFloat)left bottom:(CGFloat)bottom right:(CGFloat)right {
+- (ConstraintDictionary *)constrainView:(UIView *)view top:(CGFloat)top left:(CGFloat)left bottom:(CGFloat)bottom right:(CGFloat)right {
     return [self constrainView:view toInsets:UIEdgeInsetsMake(top, left, bottom, right)];
 }
 
-- (NSDictionary *)constrainView:(UIView *)view toInsets:(UIEdgeInsets)insets {
+- (ConstraintDictionary *)constrainView:(UIView *)view toInsets:(UIEdgeInsets)insets {
     NSMutableDictionary *constraints = [NSMutableDictionary dictionary];
     if (insets.top != NSNotFound) {
         NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:view
@@ -16,7 +21,7 @@
                                                                attribute:NSLayoutAttributeTop
                                                               multiplier:1.0
                                                                 constant:insets.top];
-        [constraints setObject:top forKey:@(IPConstraintKeyTop)];
+        constraints[IPConstraintKeyTop] = top;
     }
     if (insets.left != NSNotFound) {
         NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:view
@@ -26,7 +31,7 @@
                                                                 attribute:NSLayoutAttributeLeft
                                                                multiplier:1.0
                                                                  constant:insets.left];
-        [constraints setObject:left forKey:@(IPConstraintKeyLeft)];
+        constraints[IPConstraintKeyLeft] = left;
     }
     if (insets.bottom != NSNotFound) {
         NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:view
@@ -36,7 +41,7 @@
                                                                   attribute:NSLayoutAttributeBottom
                                                                  multiplier:1.0
                                                                    constant:-insets.bottom];
-        [constraints setObject:bottom forKey:@(IPConstraintKeyBottom)];
+        constraints[IPConstraintKeyBottom] = bottom;
     }
     if (insets.right != NSNotFound) {
         NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:view
@@ -46,11 +51,11 @@
                                                                  attribute:NSLayoutAttributeRight
                                                                 multiplier:1.0
                                                                   constant:-insets.right];
-        [constraints setObject:right forKey:@(IPConstraintKeyRight)];
+        constraints[IPConstraintKeyRight] = right;
     }
 
     view.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addConstraints:[constraints allValues]];
+    [self addConstraints:constraints.allValues];
     return constraints;
 }
 
@@ -205,7 +210,7 @@
 }
 
 - (NSLayoutConstraint *)constrainViewToLeft:(UIView *)view withInset:(CGFloat)inset {
-    return [[self constrainView:view toInsets:UIEdgeInsetsMake(NSNotFound, inset, NSNotFound, NSNotFound)] objectForKey:@(IPConstraintKeyLeft)];
+    return [self constrainView:view toInsets:UIEdgeInsetsMake(NSNotFound, inset, NSNotFound, NSNotFound)][IPConstraintKeyLeft];
 }
 
 - (NSLayoutConstraint *)constrainViewToRight:(UIView *)view {
@@ -213,7 +218,7 @@
 }
 
 - (NSLayoutConstraint *)constrainViewToRight:(UIView *)view withInset:(CGFloat)inset {
-    return [[self constrainView:view toInsets:UIEdgeInsetsMake(NSNotFound, NSNotFound, NSNotFound, -inset)] objectForKey:@(IPConstraintKeyRight)];
+    return [self constrainView:view toInsets:UIEdgeInsetsMake(NSNotFound, NSNotFound, NSNotFound, -inset)][IPConstraintKeyRight];
 }
 
 - (NSLayoutConstraint *)constrainViewToTop:(UIView *)view {
@@ -221,7 +226,7 @@
 }
 
 - (NSLayoutConstraint *)constrainViewToTop:(UIView *)view withInset:(CGFloat)inset {
-    return [[self constrainView:view toInsets:UIEdgeInsetsMake(inset, NSNotFound, NSNotFound, NSNotFound)] objectForKey:@(IPConstraintKeyTop)];
+    return [self constrainView:view toInsets:UIEdgeInsetsMake(inset, NSNotFound, NSNotFound, NSNotFound)][IPConstraintKeyTop];
 }
 
 - (NSLayoutConstraint *)constrainViewToBottom:(UIView *)view {
@@ -229,7 +234,7 @@
 }
 
 - (NSLayoutConstraint *)constrainViewToBottom:(UIView *)view withInset:(CGFloat)inset {
-    return [[self constrainView:view toInsets:UIEdgeInsetsMake(NSNotFound, NSNotFound, -inset, NSNotFound)] objectForKey:@(IPConstraintKeyBottom)];
+    return [self constrainView:view toInsets:UIEdgeInsetsMake(NSNotFound, NSNotFound, -inset, NSNotFound)][IPConstraintKeyBottom];
 }
 
 - (NSLayoutConstraint *)constrainViewToMiddleVertically:(UIView *)view {
@@ -258,11 +263,11 @@
                     multiplier:1];
 }
 
-- (NSDictionary *)constrainViewToAllEdges:(UIView *)view {
+- (ConstraintDictionary *)constrainViewToAllEdges:(UIView *)view {
     return [self constrainView:view toInsets:UIEdgeInsetsZero];
 }
 
-- (NSDictionary *)constrainViewToHorizontalEdges:(UIView *)view {
+- (ConstraintDictionary *)constrainViewToHorizontalEdges:(UIView *)view {
     return [self constrainView:view toInsets:UIEdgeInsetsMake(NSNotFound, 0, NSNotFound, 0)];
 }
 

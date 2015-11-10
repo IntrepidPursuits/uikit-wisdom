@@ -1,14 +1,14 @@
 @import UIKit;
 
+typedef NSDictionary<NSString *, NSLayoutConstraint *> ConstraintDictionary;
+
 /**
  *  When a method returns a dictionary, retrieve the desired contraint by using the following keys:
  */
-NS_ENUM(NSInteger, IPConstraintKey) {
-    IPConstraintKeyTop,
-    IPConstraintKeyLeft,
-    IPConstraintKeyBottom,
-    IPConstraintKeyRight,
-};
+extern NSString *const IPConstraintKeyTop;
+extern NSString *const IPConstraintKeyLeft;
+extern NSString *const IPConstraintKeyBottom;
+extern NSString *const IPConstraintKeyRight;
 
 @interface UIView (CBConstraints)
 
@@ -18,7 +18,7 @@ NS_ENUM(NSInteger, IPConstraintKey) {
  *  @param view   the view to constrain
  *  @param insets the insets to use when positioning the view
  */
-- (NSDictionary *)constrainView:(UIView *)view toInsets:(UIEdgeInsets)insets;
+- (ConstraintDictionary *)constrainView:(UIView *)view toInsets:(UIEdgeInsets)insets;
 
 /*!
  *  Constrain view's left edge to the left edge of the caller
@@ -317,13 +317,13 @@ NS_ENUM(NSInteger, IPConstraintKey) {
  *
  *  @param view the view to constrain
  */
-- (NSDictionary *)constrainViewToAllEdges:(UIView *)view;
+- (ConstraintDictionary *)constrainViewToAllEdges:(UIView *)view;
 
 /*!
  *  Constrain the left and right edges of the view to the caller
  *
  *  @param view the view to constrain
  */
-- (NSDictionary *)constrainViewToHorizontalEdges:(UIView *)view;
+- (ConstraintDictionary *)constrainViewToHorizontalEdges:(UIView *)view;
 
 @end
