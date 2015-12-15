@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = "IP-UIKit-Wisdom"
-  s.version       = "0.0.7"
+  s.version       = "0.0.8"
   s.summary       = "A bag of internal helper libraries and categories around UIKit"
   s.description   = <<-DESC
                     A bag of internal helper libraries and categories around UIKit, written by the developers of Intrepid Pursuits.
