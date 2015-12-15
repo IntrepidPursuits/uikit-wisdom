@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage      = "https://github.com/IntrepidPursuits/uikit-wisdom"
   s.license       = "MIT"
   s.authors       = { "Ying Quan Tan" => "ying@intrepid.io" }
-  s.source        = { :git => "https://github.com/IntrepidPursuits/uikit-wisdom.git", :tag => "v0.0.7" }
+  s.source        = { :git => "https://github.com/IntrepidPursuits/uikit-wisdom.git", :tag => "v0.0.8" }
   s.source_files  = "src/**/*.{h,m}"
   s.exclude_files = "tests/**/*"
   s.platform      = "ios"
