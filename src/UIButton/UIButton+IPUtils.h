@@ -1,5 +1,5 @@
 //
-//  UIButton+Utils.h
+//  UIButton+IPUtils.h
 //  Pods
 //
 //  Created by Ying Quan Tan on 12/24/15.
@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface UIButton (Utils)
+@interface UIButton (IPUtils)
 
 /**
  *  Puts a space between the image and the text in a UIButton. Assumes that image is on the left, and text is right

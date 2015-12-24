@@ -1,14 +1,14 @@
 //
-//  UIButton+Utils.m
+//  UIButton+IPUtils.m
 //  Pods
 //
 //  Created by Ying Quan Tan on 12/24/15.
 //
 //
 
-#import "UIButton+Utils.h"
+#import "UIButton+IPUtils.h"
 
-@implementation UIButton (Utils)
+@implementation UIButton (IPUtils)
 
 - (void)centerButtonAndImageWithSpacing:(CGFloat)spacing {
     CGFloat insetAmount = spacing / 2.0;
