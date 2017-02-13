@@ -15,10 +15,9 @@
 }
 
 - (void)ip_addChildViewController:(UIViewController *)controller toView:(UIView *)view {
-    [controller willMoveToParentViewController:self];
     [self addChildViewController:controller];
     [view addSubview:controller.view];
-    [self didMoveToParentViewController:self];
+    [controller didMoveToParentViewController:self];
 }
 
 - (void)ip_removeFromParentViewController {
